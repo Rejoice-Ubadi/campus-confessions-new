@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Confessions</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <!-- Logo -->
+
+        <div class="logo">
+
+            <img src="../images/logo.png.png" alt="Logo">
+
+            <div class="logo-text">
+
+                <h2>Campus</h2>
+                <p>Confessions & Opinions</p>
+
+            </div>
+
+        </div>
+
+        <!-- Search -->
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+            type="text"
+            id="searchInput"
+            placeholder="Search confessions, opinions, or hashtags...">
+
+        </div>
+
+        <!-- Right Buttons -->
+
+        <div class="nav-right">
+
+            <button class="plus-btn">
+
+                <i class="fa-solid fa-plus"></i>
+
+            </button>
+
+            <button class="share-btn">
+
+                Share Something
+
+            </button>
+
+            <button class="theme-btn">
+
+                <i class="fa-regular fa-moon"></i>
+
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- PAGE CONTENT -->
+    <div class="page-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <a href="#" class="sidebar-link active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="#" class="sidebar-link" id="topPostsLink">
+                    <i class="fa-solid fa-fire"></i>
+                    <span>Top Posts</span>
+                </a>
+                <a href="#" class="sidebar-link" id="recentPostsLink">
+                    <i class="fa-regular fa-clock"></i>
+                    <span>Recent</span>
+                </a>
+                <a href="#" class="sidebar-link">
+                    <i class="fa-solid fa-border-all"></i>
+                    <span>Categories</span>
+                </a>
+                
+                
+                <a href="#" class="sidebar-link" id="aboutLink">
+    <i class="fa-regular fa-circle-info"></i>
+    <span>About</span>
+</a>
+            </nav>
+
+            <div class="anonymous-card">
+                <div class="anonymous-image">
+                    <img src="../images/Annonymous.png" alt="Anonymous person">
+                </div>
+                <h3>100% Anonymous</h3>
+                <p>
+                    No sign-ups. No names.<br>
+                    Just honest thoughts from<br>
+                    your campus.
+                </p>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- ABOUT SECTION -->
+            <div id="about-section" class="about-section">
+
+                <div class="about-header">
+                    <div class="about-icon">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+
+                    <div>
+                        <h1>About Campus Confessions</h1>
+                        <p>A place to share, connect, and be heard anonymously.</p>
+                    </div>
+                </div>
+
+                <div class="about-card">
+
+                    <h2>What is Campus Confessions?</h2>
+
+                    <p>
+                        Campus Confessions is a space where students can share
+                        their thoughts, experiences, opinions, and everyday
+                        campus moments without revealing who they are.
+                    </p>
+
+                    <p>
+                        Whether you have something funny to share, something
+                        that's been bothering you, or simply an opinion you
+                        want people to hear, this is a place to speak freely.
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <h2>Why Anonymous?</h2>
+
+                    <p>
+                        Sometimes it's easier to say what you really think
+                        when your name isn't attached to it. Campus Confessions
+                        gives students a place to express themselves without
+                        worrying about their identity being displayed.
+                    </p>
+
+                </div>
+
+                <div class="about-card">
+
+                    <h2>Our Community</h2>
+
+                    <p>
+                        Campus Confessions is meant to be a fun and welcoming
+                        space for everyone. Share your thoughts, read what
+                        other students are saying, and remember that there's
+                        a real person behind every post.
+                    </p>
+
+                </div>
+
+                <div class="about-card about-reminder">
+
+                    <h2>Keep It Respectful</h2>
+
+                    <p>
+                        Being anonymous doesn't mean we should forget to be
+                        respectful. Avoid harassment, threats, personal
+                        information, or anything intended to hurt someone.
+                    </p>
+
+                    <p>
+                        Be honest. Be kind. Be respectful.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="category-tabs">
+                <button class="category-tab active">
+                    <i class="fa-solid fa-border-all"></i>
+                    All
+                </button>
+                <button class="category-tab">
+                    <i class="fa-solid fa-mask"></i>
+                    Confessions
+                </button>
+                <button class="category-tab">
+                    <i class="fa-solid fa-comment"></i>
+                    Opinions
+                </button>
+            </div>
+            <div id="posts-container"></div>
+        </main>
+
+        <aside class="right-sidebar">
+
+            <!-- TRENDING -->
+            <div class="info-card">
+
+                <h2>Trending Now 🔥</h2>
+
+                <div class="trending-list" id="trending-list">
+                    <div class="trending-item">
+                        <span>Exams</span>
+                        <span>213</span>
+                    </div>
+
+                    <div class="trending-item">
+                        <span>Group Projects</span>
+                        <span>189</span>
+                    </div>
+
+                    <div class="trending-item">
+                        <span>Campus Life</span>
+                        <span>156</span>
+                    </div>
+
+                    <div class="trending-item">
+                        <span>Crushes</span>
+                        <span>142</span>
+                    </div>
+
+                    <div class="trending-item">
+                        <span>Professors</span>
+                        <span>98</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TOP TAGS -->
+            <div class="info-card">
+
+                <h2>Top Tags</h2>
+
+                <div class="tags-list">
+
+                    <span>#college</span>
+                    <span>#exams</span>
+                    <span>#rant</span>
+                    <span>#crush</span>
+                    <span>#relationships</span>
+                    <span>#homework</span>
+                    <span>#professors</span>
+                    <span>#mentalhealth</span>
+                    <span>#friends</span>
+                    <span>#campuslife</span>
+                    <span>#stress</span>
+
+                </div>
+
+            </div>
+
+            <!-- REMINDER -->
+            <div class="info-card reminder-card">
+
+                <div class="reminder-title">
+                    <h2>Reminder</h2>
+                    <span>♥</span>
+                </div>
+
+                <p>
+                    Be kind. Be honest. Be respectful.
+                    We're all here to share and support
+                    each other anonymously.
+                </p>
+
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="right-footer">
+                <p>© 2024 Campus Confessions</p>
+                <p>All rights reserved.</p>
+            </footer>
+
+        </aside>
+
+            </div>
+        </div>
+
+        <!-- Share Something Modal -->
+        <div class="modal-overlay" id="postModal">
+            <div class="post-modal">
+
+                <button class="close-modal" id="closeModal">&times;</button>
+
+                <h2>Share Something</h2>
+
+                <p class="modal-subtitle">
+                    Share your thoughts anonymously.
+                </p>
+
+                <div class="category-select">
+                    <button class="category-option active" data-category="Confessions">
+                        🎭 Confession
+                    </button>
+
+                    <button class="category-option" data-category="Opinions">
+                        💬 Opinion
+                    </button>
+                </div>
+
+                <textarea
+                    id="postContent"
+                    placeholder="What's on your mind?"
+                    maxlength="500"
+                ></textarea>
+
+                <div class="character-count">
+                    <span id="characterCount">0</span>/500
+                </div>
+
+                <button class="submit-post" id="submitPost">
+                    Post Anonymously
+                </button>
+
+                <p class="post-message" id="postMessage"></p>
+
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+        <!-- Comment Modal -->
+        <div class="modal-overlay" id="commentModal">
+
+            <div class="post-modal">
+
+                <button class="close-modal" id="closeCommentModal">
+                    &times;
+                </button>
+
+                <h2>Comments</h2>
+
+                <div id="commentsList"></div>
+
+                <textarea
+                    id="commentContent"
+                    placeholder="Write a comment anonymously..."
+                    maxlength="300"
+                ></textarea>
+
+                <button class="submit-post" id="submitComment">
+                    Comment Anonymously
+                </button>
+
+                <p class="post-message" id="commentMessage"></p>
+
+            </div>
+
+        </div>
+
+        <script src="../js/script.js"></script>
+        </body>
+        </html>
