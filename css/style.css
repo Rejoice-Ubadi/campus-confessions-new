@@ -1469,3 +1469,187 @@ body{
     }
 
 }
+
+/* =========================================
+   FINAL MOBILE NAVBAR
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 16px 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        overflow: hidden;
+    }
+
+    /* Logo */
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .logo img {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    .logo-text {
+        min-width: 0;
+    }
+
+    .logo-text h2 {
+        font-size: 27px;
+        line-height: 1;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .logo-text p {
+        font-size: 15px;
+        line-height: 1.25;
+        margin: 5px 0 0;
+    }
+
+
+    /* Search button */
+    .search-box {
+        width: 56px;
+        height: 56px;
+        flex: 0 0 56px;
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-radius: 18px;
+        box-sizing: border-box;
+    }
+
+    .search-box i {
+        font-size: 21px;
+    }
+
+    .search-box input {
+        display: none;
+    }
+
+
+    /* Right side */
+    .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+
+    /* + BUTTON — KEEP THIS WORKING */
+    .plus-btn {
+        width: 56px;
+        height: 56px;
+        flex: 0 0 56px;
+
+        padding: 0;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .plus-btn i {
+        font-size: 23px;
+        margin: 0;
+    }
+
+
+    /* HIDE "SHARE SOMETHING" ON MOBILE */
+    .share-btn {
+        display: none !important;
+    }
+
+
+    /* Moon button */
+    .theme-btn {
+        width: 56px;
+        height: 56px;
+        flex: 0 0 56px;
+
+        padding: 0;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .theme-btn i {
+        font-size: 21px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        padding: 14px 14px;
+        gap: 8px;
+    }
+
+    .logo {
+        gap: 7px;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo-text h2 {
+        font-size: 25px;
+    }
+
+    .logo-text p {
+        font-size: 14px;
+    }
+
+
+    .search-box {
+        width: 50px;
+        height: 50px;
+        flex-basis: 50px;
+        border-radius: 16px;
+    }
+
+
+    .nav-right {
+        gap: 6px;
+    }
+
+
+    .plus-btn,
+    .theme-btn {
+        width: 48px;
+        height: 48px;
+        flex-basis: 48px;
+    }
+
+
+    .plus-btn i,
+    .theme-btn i {
+        font-size: 19px;
+    }
+}
