@@ -1229,48 +1229,31 @@ body{
 }
 
 /* =========================================================
-   CLEAN MOBILE DESIGN
+   MOBILE RESPONSIVE DESIGN
    ========================================================= */
 
 @media (max-width: 768px) {
 
-    /* -----------------------------------------------------
-       BASIC MOBILE RESET
-    ----------------------------------------------------- */
-
     html,
     body {
         width: 100%;
-        max-width: 100%;
+        min-height: 100%;
         overflow-x: hidden;
     }
 
     body {
         margin: 0;
-        padding: 0;
     }
+
+    /* MAIN CONTAINER */
 
     .container {
         width: 100%;
-        max-width: 100%;
         margin: 0;
-        padding: 0;
+        padding-top: 76px;
     }
 
-
-    /* -----------------------------------------------------
-       HIDE DESKTOP SIDE BARS
-    ----------------------------------------------------- */
-
-    .sidebar,
-    .right-sidebar {
-        display: none !important;
-    }
-
-
-    /* -----------------------------------------------------
-       NAVBAR
-    ----------------------------------------------------- */
+    /* NAVBAR */
 
     .navbar {
         position: fixed;
@@ -1287,10 +1270,7 @@ body{
         display: flex;
         align-items: center;
 
-        gap: 10px;
-
         background: #090B14;
-
         border-bottom: 1px solid #1F2332;
 
         z-index: 1000;
@@ -1298,19 +1278,15 @@ body{
         box-sizing: border-box;
     }
 
-
-    /* -----------------------------------------------------
-       LOGO
-    ----------------------------------------------------- */
+    /* LOGO */
 
     .logo {
-        display: flex;
-        align-items: center;
-
-        gap: 8px;
-
         flex: 1;
         min-width: 0;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
 
         overflow: hidden;
     }
@@ -1319,8 +1295,7 @@ body{
         width: 34px;
         height: 34px;
 
-        flex: 0 0 34px;
-
+        flex-shrink: 0;
         object-fit: contain;
     }
 
@@ -1330,11 +1305,7 @@ body{
     }
 
     .logo-text h2 {
-        margin: 0;
-
-        font-size: 24px;
-        line-height: 1;
-
+        font-size: 22px;
         white-space: nowrap;
     }
 
@@ -1342,271 +1313,173 @@ body{
         display: none;
     }
 
-
-    /* -----------------------------------------------------
-       SEARCH
-    ----------------------------------------------------- */
+    /* SEARCH */
 
     .search-box {
-        width: 46px;
-        height: 46px;
+        flex: 0 0 44px;
 
-        flex: 0 0 46px;
+        width: 44px;
+        height: 44px;
 
         margin: 0;
-
         padding: 0;
 
         display: flex;
         align-items: center;
 
-        background: #141722;
-
-        border: 1px solid #292D3C;
-
-        border-radius: 14px;
-
         overflow: hidden;
-
         box-sizing: border-box;
-
-        transition:
-            width 0.25s ease,
-            flex-basis 0.25s ease;
     }
 
     .search-box i {
-        width: 46px;
-        min-width: 46px;
-
-        height: 46px;
+        width: 44px;
+        min-width: 44px;
+        height: 44px;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        color: #9CA3B5;
-
-        font-size: 19px;
-
-        cursor: pointer;
+        font-size: 18px;
     }
 
     .search-box input {
         display: none;
-
-        width: 100%;
-
         margin: 0;
         padding: 0 8px 0 0;
-
-        background: transparent;
-
-        border: none;
-        outline: none;
-
-        color: white;
-
-        font-size: 13px;
     }
-
-    .search-box input::placeholder {
-        color: #777D91;
-    }
-
-    /* Search expanded */
 
     .search-box.active {
-        width: 170px;
-        flex-basis: 170px;
-
-        padding-right: 8px;
+        flex-basis: 160px;
+        width: 160px;
+        padding-right: 6px;
     }
 
     .search-box.active input {
         display: block;
     }
 
-
-    /* -----------------------------------------------------
-       RIGHT NAV BUTTONS
-    ----------------------------------------------------- */
+    /* RIGHT BUTTONS */
 
     .nav-right {
-        display: flex;
-        align-items: center;
-
+        flex-shrink: 0;
         gap: 7px;
-
-        flex: 0 0 auto;
     }
 
+    .plus-btn,
+    .theme-btn {
+        width: 44px;
+        height: 44px;
 
-    /* PLUS */
-
-    .plus-btn {
-        width: 46px;
-        height: 46px;
-
-        flex: 0 0 46px;
-
-        padding: 0;
-
-        border-radius: 50%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex: 0 0 44px;
     }
 
-    .plus-btn i {
-        font-size: 20px;
-    }
-
-
-    /* HIDE SHARE BUTTON */
+    /* Hide desktop Share Something button */
 
     .share-btn {
         display: none !important;
     }
 
-
-    /* MOON */
-
-    .theme-btn {
-        width: 46px;
-        height: 46px;
-
-        flex: 0 0 46px;
-
-        padding: 0;
-
-        border-radius: 50%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .theme-btn i {
-        font-size: 19px;
-    }
-
-
-    /* -----------------------------------------------------
-       PAGE LAYOUT
-    ----------------------------------------------------- */
+    /* PAGE LAYOUT */
 
     .page-layout {
         display: block;
 
         width: 100%;
-        max-width: 100%;
-
         margin: 0;
         padding: 0;
 
         box-sizing: border-box;
     }
 
+    /* Hide sidebars */
 
-    /* -----------------------------------------------------
-       MAIN CONTENT
-    ----------------------------------------------------- */
+    .sidebar,
+    .right-sidebar {
+        display: none !important;
+    }
+
+    /* MAIN CONTENT */
 
     .main-content {
         width: 100%;
-        max-width: 100%;
+        max-width: none;
 
         margin: 0;
-
-        padding: 0 14px 30px;
+        padding: 18px 14px 30px;
 
         box-sizing: border-box;
     }
 
-
-    /* -----------------------------------------------------
-       CATEGORY TABS
-    ----------------------------------------------------- */
+    /* CATEGORY TABS */
 
     .category-tabs {
         width: 100%;
 
-        margin: 0;
-
-        padding: 18px 0 20px;
-
         display: flex;
-
         gap: 7px;
 
-        box-sizing: border-box;
+        margin: 0 0 18px;
+        padding: 0;
 
-        overflow: hidden;
+        box-sizing: border-box;
     }
 
     .category-tab {
         flex: 1;
-
         min-width: 0;
 
         height: 48px;
 
-        padding: 0 6px;
+        padding: 0 5px;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        gap: 6px;
-
-        border-radius: 13px;
+        gap: 5px;
 
         font-size: 13px;
 
         white-space: nowrap;
-
         box-sizing: border-box;
     }
 
     .category-tab i {
-        flex: 0 0 auto;
-
         font-size: 14px;
+        flex-shrink: 0;
     }
 
-
-    /* -----------------------------------------------------
-       POSTS
-    ----------------------------------------------------- */
+    /* POSTS */
 
     #posts-container {
         width: 100%;
-        max-width: 100%;
+        max-width: none;
     }
 
     .post-card {
         width: 100%;
-        max-width: 100%;
+        max-width: none;
 
         margin: 0 0 14px;
-
         padding: 20px;
 
         box-sizing: border-box;
-
-        border-radius: 17px;
     }
 
     .post-text {
+        width: 100%;
         max-width: 100%;
 
-        font-size: 20px;
+        font-size: 19px;
         line-height: 1.5;
 
         overflow-wrap: anywhere;
         word-break: normal;
+    }
+
+    .post-header {
+        width: 100%;
     }
 
     .post-user {
@@ -1618,77 +1491,52 @@ body{
     }
 
     .post-info h3 {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .post-meta {
         flex-wrap: wrap;
-
-        font-size: 13px;
+        font-size: 12px;
     }
 
-
-    /* -----------------------------------------------------
-       POST ACTIONS
-    ----------------------------------------------------- */
+    /* POST ACTIONS */
 
     .post-actions {
         width: 100%;
-
         display: flex;
         justify-content: space-between;
-
-        box-sizing: border-box;
+        align-items: center;
     }
 
     .left-actions,
     .right-actions {
-        display: flex;
-        align-items: center;
-
-        gap: 8px;
+        gap: 10px;
     }
 
+    .action-btn,
+    .icon-btn {
+        padding: 5px;
+    }
 
-    /* -----------------------------------------------------
-       ABOUT
-    ----------------------------------------------------- */
+    /* ABOUT */
 
     .about-section {
         width: 100%;
-        max-width: 100%;
-
+        max-width: none;
         margin: 0;
-        padding-top: 18px;
-
-        box-sizing: border-box;
+        padding: 0;
     }
 
-    .about-header {
-        gap: 12px;
-    }
-
-    .about-header h1 {
-        font-size: 22px;
-    }
-
-
-    /* -----------------------------------------------------
-       MODAL
-    ----------------------------------------------------- */
+    /* MODALS */
 
     .modal-overlay {
-        padding: 15px;
-
-        box-sizing: border-box;
+        padding: 14px;
     }
 
     .post-modal {
         width: 100%;
-        max-width: 500px;
-
+        max-width: 550px;
         padding: 22px;
-
         box-sizing: border-box;
     }
 
@@ -1696,10 +1544,8 @@ body{
     #commentContent {
         width: 100%;
         max-width: 100%;
-
         box-sizing: border-box;
     }
-
 }
 
 
@@ -1709,99 +1555,87 @@ body{
 
 @media (max-width: 480px) {
 
-    .navbar {
-        height: 72px;
-
-        padding: 9px 12px;
-
-        gap: 7px;
+    .container {
+        padding-top: 72px;
     }
 
-
-    /* LOGO */
+    .navbar {
+        height: 72px;
+        padding: 9px 10px;
+        gap: 6px;
+    }
 
     .logo {
-        gap: 7px;
+        gap: 6px;
     }
 
     .logo img {
         width: 32px;
         height: 32px;
-
-        flex-basis: 32px;
     }
 
     .logo-text h2 {
-        font-size: 22px;
+        font-size: 20px;
     }
 
-
-    /* SEARCH */
-
     .search-box {
-        width: 44px;
-        height: 44px;
-
-        flex-basis: 44px;
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
     }
 
     .search-box i {
-        width: 44px;
-        min-width: 44px;
-
-        height: 44px;
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
     }
 
     .search-box.active {
-        width: 160px;
-        flex-basis: 160px;
+        width: 150px;
+        flex-basis: 150px;
     }
-
-
-    /* BUTTONS */
 
     .plus-btn,
     .theme-btn {
-        width: 44px;
-        height: 44px;
-
-        flex-basis: 44px;
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
     }
 
-
-    /* CATEGORIES */
+    .main-content {
+        padding: 14px 10px 25px;
+    }
 
     .category-tabs {
-        padding-top: 16px;
-        padding-bottom: 18px;
-
-        gap: 6px;
+        gap: 5px;
+        margin-bottom: 15px;
     }
 
     .category-tab {
-        height: 46px;
-
-        padding: 0 5px;
-
+        height: 45px;
+        padding: 0 3px;
         font-size: 12px;
-
-        border-radius: 12px;
-
-        gap: 5px;
+        gap: 4px;
     }
 
     .category-tab i {
         font-size: 13px;
     }
 
-
-    /* POSTS */
-
     .post-card {
-        padding: 18px;
+        padding: 17px;
     }
 
     .post-text {
-        font-size: 19px;
+        font-size: 18px;
+    }
+
+    .post-actions {
+        margin-top: 15px;
+    }
+
+    .left-actions,
+    .right-actions {
+        gap: 5px;
     }
 }
