@@ -1228,64 +1228,213 @@ body{
     border-color: rgba(169, 112, 255, 0.3);
 }
 
-/* =========================
-   MOBILE RESPONSIVE
-   ========================= */
+/* =========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================= */
 
 @media (max-width: 768px) {
 
+    /* Prevent the website from becoming wider than the phone */
+    html,
     body {
+        width: 100%;
+        max-width: 100%;
         overflow-x: hidden;
     }
 
-    .sidebar {
-        display: none;
+    /* =========================================
+       HIDE DESKTOP SIDEBARS
+       ========================================= */
+
+    .sidebar,
+    .right-sidebar {
+        display: none !important;
     }
 
-    .right-sidebar {
-        display: none;
-    }
+
+    /* =========================================
+       MAIN CONTENT
+       ========================================= */
 
     .main-content {
         width: 100%;
+        max-width: 100%;
         margin: 0;
         padding: 15px;
         box-sizing: border-box;
     }
 
+
+    /* =========================================
+       TOP HEADER
+       ========================================= */
+
+    .top-header {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .header-content {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        box-sizing: border-box;
+    }
+
+
+    /* =========================================
+       LOGO / CAMPUS CONFESSIONS TITLE
+       ========================================= */
+
+    .logo-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 0;
+        flex: 1;
+    }
+
+    .logo-section img {
+        width: 42px;
+        height: 42px;
+        object-fit: contain;
+        flex-shrink: 0;
+    }
+
+    .logo-section h1 {
+        font-size: 28px;
+        line-height: 1;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .logo-section p {
+        font-size: 15px;
+        line-height: 1.2;
+        margin: 4px 0 0;
+    }
+
+
+    /* =========================================
+       HEADER BUTTONS
+       ========================================= */
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+    }
+
+    /* Search button */
+
+    .search-button {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        padding: 0;
+        flex-shrink: 0;
+    }
+
+
+    /* Plus / Share button */
+
+    .share-button,
+    .add-post-button {
+        width: 54px;
+        height: 54px;
+        min-width: 54px;
+        padding: 0;
+        border-radius: 50%;
+        flex-shrink: 0;
+    }
+
+    /* Only show the + icon on mobile */
+
+    .share-button span,
+    .add-post-button span {
+        display: none;
+    }
+
+    .share-button i,
+    .add-post-button i {
+        margin: 0;
+        font-size: 24px;
+    }
+
+
+    /* =========================================
+       CATEGORY BUTTONS
+       ========================================= */
+
     .category-tabs {
         width: 100%;
+        max-width: 100%;
         display: flex;
         gap: 8px;
-        overflow-x: auto;
+        padding: 10px 0;
         box-sizing: border-box;
+        overflow: hidden;
     }
 
     .category-tab {
         flex: 1;
+        min-width: 0;
+        padding: 11px 5px;
+        font-size: 14px;
         white-space: nowrap;
+        box-sizing: border-box;
+        text-align: center;
     }
+
+    .category-tab i {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+
+
+    /* =========================================
+       POST CARDS
+       ========================================= */
 
     .post-card {
         width: 100%;
-        box-sizing: border-box;
+        max-width: 100%;
         margin: 0 0 15px 0;
+        box-sizing: border-box;
     }
 
     .post-text {
+        max-width: 100%;
         overflow-wrap: break-word;
         word-break: break-word;
     }
 
+
+    /* =========================================
+       POST ACTIONS
+       ========================================= */
+
     .post-actions {
         width: 100%;
+        max-width: 100%;
         box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .left-actions,
     .right-actions {
         display: flex;
         align-items: center;
+        gap: 8px;
     }
 
     .action-btn,
@@ -1293,21 +1442,30 @@ body{
         padding: 8px;
     }
 
-    /* Share button */
-    .share-button {
-        max-width: calc(100% - 30px);
-    }
 
-    /* Modals */
+    /* =========================================
+       MODALS
+       ========================================= */
+
     .post-modal {
         width: calc(100% - 30px);
-        max-width: none;
+        max-width: 500px;
         box-sizing: border-box;
     }
 
     .post-modal textarea {
         width: 100%;
+        max-width: 100%;
         box-sizing: border-box;
     }
-}
 
+
+    /* =========================================
+       GENERAL IMAGES
+       ========================================= */
+
+    img {
+        max-width: 100%;
+    }
+
+}
