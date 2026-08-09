@@ -1228,3 +1228,86 @@ body{
     border-color: rgba(169, 112, 255, 0.3);
 }
 
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .right-sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .category-tabs {
+        width: 100%;
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        box-sizing: border-box;
+    }
+
+    .category-tab {
+        flex: 1;
+        white-space: nowrap;
+    }
+
+    .post-card {
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0 0 15px 0;
+    }
+
+    .post-text {
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+    .post-actions {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .left-actions,
+    .right-actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .action-btn,
+    .icon-btn {
+        padding: 8px;
+    }
+
+    /* Share button */
+    .share-button {
+        max-width: calc(100% - 30px);
+    }
+
+    /* Modals */
+    .post-modal {
+        width: calc(100% - 30px);
+        max-width: none;
+        box-sizing: border-box;
+    }
+
+    .post-modal textarea {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
