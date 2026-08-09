@@ -262,7 +262,7 @@ function displayPosts(posts) {
                 <div class="post-user">
 
                     <div class="post-avatar">
-                        <img src="../images/logo.png.png" alt="Anonymous">
+                        <img src="images/logo.png.png" alt="Anonymous">
                     </div>
 
                     <div class="post-info">
