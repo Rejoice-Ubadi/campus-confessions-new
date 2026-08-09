@@ -1228,13 +1228,12 @@ body{
     border-color: rgba(169, 112, 255, 0.3);
 }
 
-/* =========================================
-   MOBILE RESPONSIVE DESIGN
-   ========================================= */
+/* =====================================================
+   MOBILE DESIGN
+   ===================================================== */
 
 @media (max-width: 768px) {
 
-    /* Prevent the website from becoming wider than the phone */
     html,
     body {
         width: 100%;
@@ -1242,258 +1241,45 @@ body{
         overflow-x: hidden;
     }
 
-    /* =========================================
-       HIDE DESKTOP SIDEBARS
-       ========================================= */
-
+    /* Hide sidebars */
     .sidebar,
     .right-sidebar {
         display: none !important;
     }
 
 
-    /* =========================================
-       MAIN CONTENT
-       ========================================= */
-
-    .main-content {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-
-    /* =========================================
-       TOP HEADER
-       ========================================= */
-
-    .top-header {
-        width: 100%;
-        max-width: 100%;
-        padding: 15px;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .header-content {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        box-sizing: border-box;
-    }
-
-
-    /* =========================================
-       LOGO / CAMPUS CONFESSIONS TITLE
-       ========================================= */
-
-    .logo-section {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        min-width: 0;
-        flex: 1;
-    }
-
-    .logo-section img {
-        width: 42px;
-        height: 42px;
-        object-fit: contain;
-        flex-shrink: 0;
-    }
-
-    .logo-section h1 {
-        font-size: 28px;
-        line-height: 1;
-        margin: 0;
-        white-space: nowrap;
-    }
-
-    .logo-section p {
-        font-size: 15px;
-        line-height: 1.2;
-        margin: 4px 0 0;
-    }
-
-
-    /* =========================================
-       HEADER BUTTONS
-       ========================================= */
-
-    .header-actions {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-shrink: 0;
-    }
-
-    /* Search button */
-
-    .search-button {
-        width: 54px;
-        height: 54px;
-        min-width: 54px;
-        padding: 0;
-        flex-shrink: 0;
-    }
-
-
-    /* Plus / Share button */
-
-    .share-button,
-    .add-post-button {
-        width: 54px;
-        height: 54px;
-        min-width: 54px;
-        padding: 0;
-        border-radius: 50%;
-        flex-shrink: 0;
-    }
-
-    /* Only show the + icon on mobile */
-
-    .share-button span,
-    .add-post-button span {
-        display: none;
-    }
-
-    .share-button i,
-    .add-post-button i {
-        margin: 0;
-        font-size: 24px;
-    }
-
-
-    /* =========================================
-       CATEGORY BUTTONS
-       ========================================= */
-
-    .category-tabs {
-        width: 100%;
-        max-width: 100%;
-        display: flex;
-        gap: 8px;
-        padding: 10px 0;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-    .category-tab {
-        flex: 1;
-        min-width: 0;
-        padding: 11px 5px;
-        font-size: 14px;
-        white-space: nowrap;
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .category-tab i {
-        font-size: 14px;
-        margin-right: 4px;
-    }
-
-
-    /* =========================================
-       POST CARDS
-       ========================================= */
-
-    .post-card {
-        width: 100%;
-        max-width: 100%;
-        margin: 0 0 15px 0;
-        box-sizing: border-box;
-    }
-
-    .post-text {
-        max-width: 100%;
-        overflow-wrap: break-word;
-        word-break: break-word;
-    }
-
-
-    /* =========================================
-       POST ACTIONS
-       ========================================= */
-
-    .post-actions {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .left-actions,
-    .right-actions {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .action-btn,
-    .icon-btn {
-        padding: 8px;
-    }
-
-
-    /* =========================================
-       MODALS
-       ========================================= */
-
-    .post-modal {
-        width: calc(100% - 30px);
-        max-width: 500px;
-        box-sizing: border-box;
-    }
-
-    .post-modal textarea {
-        width: 100%;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-
-    /* =========================================
-       GENERAL IMAGES
-       ========================================= */
-
-    img {
-        max-width: 100%;
-    }
-
-}
-
-/* =========================================
-   MOBILE TOP BAR + CATEGORIES
-   ========================================= */
-
-@media (max-width: 768px) {
-
-    /* ---------- TOP NAVBAR ---------- */
+    /* =================================================
+       NAVBAR
+       ================================================= */
 
     .navbar {
-        width: 100%;
-        height: 88px;
-        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: none;
 
-        padding: 12px 16px;
+        width: 100%;
+        max-width: none;
+        height: 78px;
+
+        padding: 10px 14px;
 
         display: flex;
         align-items: center;
         gap: 10px;
 
-        overflow: visible;
+        background: #090B14;
+        border-bottom: 1px solid #1F2332;
+
+        z-index: 1000;
+
+        box-sizing: border-box;
     }
 
 
-    /* ---------- LOGO ---------- */
+    /* =================================================
+       LOGO
+       ================================================= */
 
     .logo {
         flex: 1;
@@ -1501,55 +1287,61 @@ body{
 
         display: flex;
         align-items: center;
+
         gap: 8px;
     }
 
     .logo img {
-        width: 38px;
-        height: 38px;
-        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+
+        flex: 0 0 36px;
+
+        object-fit: contain;
     }
 
     .logo-text {
         min-width: 0;
-        overflow: hidden;
     }
 
     .logo-text h2 {
         margin: 0;
 
-        font-size: 25px;
-        line-height: 1.05;
+        font-size: 23px;
+        line-height: 1;
 
         white-space: nowrap;
     }
+
+    /* Hide "Confessions & Opinions" on phones.
+       This is what was making the logo area too tall. */
 
     .logo-text p {
-        margin: 3px 0 0;
-
-        font-size: 12px;
-        line-height: 1.1;
-
-        white-space: nowrap;
+        display: none;
     }
 
 
-    /* ---------- SEARCH ---------- */
+    /* =================================================
+       SEARCH
+       ================================================= */
 
     .search-box {
-        width: 50px;
-        height: 50px;
+        width: 46px;
+        height: 46px;
 
-        flex: 0 0 50px;
+        flex: 0 0 46px;
+
+        margin: 0;
+
+        padding: 0;
 
         display: flex;
         align-items: center;
 
-        box-sizing: border-box;
+        background: #141722;
+        border: 1px solid #292D3D;
 
-        padding: 0;
-
-        border-radius: 16px;
+        border-radius: 15px;
 
         overflow: hidden;
 
@@ -1557,14 +1349,18 @@ body{
     }
 
     .search-box i {
-        width: 50px;
-        min-width: 50px;
+        width: 46px;
+        min-width: 46px;
+
+        height: 46px;
 
         display: flex;
         align-items: center;
         justify-content: center;
 
-        font-size: 20px;
+        color: #9298AA;
+
+        font-size: 19px;
 
         cursor: pointer;
     }
@@ -1574,20 +1370,26 @@ body{
 
         width: 100%;
 
+        margin: 0;
+
+        padding: 0 8px;
+
+        background: transparent;
         border: none;
         outline: none;
 
-        background: transparent;
+        color: white;
 
         font-size: 14px;
     }
 
-    /* Search opens when clicked */
-    .search-box.active {
-        width: 190px;
-        flex-basis: 190px;
+    /* Search opened */
 
-        padding-right: 10px;
+    .search-box.active {
+        width: 170px;
+        flex-basis: 170px;
+
+        padding-right: 8px;
     }
 
     .search-box.active input {
@@ -1595,11 +1397,14 @@ body{
     }
 
 
-    /* ---------- RIGHT BUTTONS ---------- */
+    /* =================================================
+       RIGHT BUTTONS
+       ================================================= */
 
     .nav-right {
         display: flex;
         align-items: center;
+
         gap: 7px;
 
         flex-shrink: 0;
@@ -1609,10 +1414,10 @@ body{
     /* PLUS */
 
     .plus-btn {
-        width: 50px;
-        height: 50px;
+        width: 46px;
+        height: 46px;
 
-        flex: 0 0 50px;
+        flex: 0 0 46px;
 
         padding: 0;
 
@@ -1624,12 +1429,12 @@ body{
     }
 
     .plus-btn i {
-        font-size: 21px;
+        font-size: 20px;
         margin: 0;
     }
 
 
-    /* SHARE BUTTON HIDDEN */
+    /* Completely hide Share Something */
 
     .share-btn {
         display: none !important;
@@ -1639,10 +1444,10 @@ body{
     /* MOON */
 
     .theme-btn {
-        width: 50px;
-        height: 50px;
+        width: 46px;
+        height: 46px;
 
-        flex: 0 0 50px;
+        flex: 0 0 46px;
 
         padding: 0;
 
@@ -1654,38 +1459,66 @@ body{
     }
 
     .theme-btn i {
-        font-size: 20px;
+        font-size: 19px;
     }
 
 
-    /* =========================================
-       CATEGORY AREA
-       ========================================= */
+    /* =================================================
+       PAGE CONTENT
+       ================================================= */
+
+    .page-layout {
+        width: 100%;
+        display: block;
+
+        margin: 0;
+        padding: 0;
+
+        box-sizing: border-box;
+    }
+
+    .main-content {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        /* IMPORTANT:
+           Leaves space underneath the fixed navbar */
+
+        padding: 94px 14px 30px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* =================================================
+       CATEGORY TABS
+       ================================================= */
 
     .category-tabs {
         width: 100%;
-        box-sizing: border-box;
 
-        margin-top: 18px;
+        margin: 0 0 22px 0;
 
-        padding: 0 16px 18px;
+        padding: 0;
 
         display: flex;
-        gap: 8px;
+
+        gap: 7px;
+
+        box-sizing: border-box;
 
         overflow: hidden;
     }
-
 
     .category-tab {
         flex: 1;
         min-width: 0;
 
-        height: 52px;
+        height: 48px;
 
-        padding: 0 8px;
-
-        box-sizing: border-box;
+        padding: 0 5px;
 
         display: flex;
         align-items: center;
@@ -1693,104 +1526,162 @@ body{
 
         gap: 6px;
 
-        border-radius: 15px;
+        border-radius: 13px;
 
-        font-size: 14px;
+        font-size: 13px;
 
         white-space: nowrap;
+
+        box-sizing: border-box;
     }
 
     .category-tab i {
-        font-size: 15px;
+        font-size: 14px;
+
         flex-shrink: 0;
+    }
+
+
+    /* =================================================
+       POSTS
+       ================================================= */
+
+    .post-card {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 0 15px 0;
+
+        padding: 22px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .post-text {
+        max-width: 100%;
+
+        font-size: 20px;
+
+        overflow-wrap: break-word;
+        word-break: break-word;
+    }
+
+
+    /* =================================================
+       POST ACTIONS
+       ================================================= */
+
+    .post-actions {
+        width: 100%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .left-actions,
+    .right-actions {
+        gap: 8px;
+    }
+
+    .action-btn,
+    .icon-btn {
+        padding: 7px;
+    }
+
+
+    /* =================================================
+       MODAL
+       ================================================= */
+
+    .post-modal {
+        width: calc(100% - 28px);
+        max-width: 500px;
+
+        box-sizing: border-box;
+    }
+
+    #postContent {
+        width: 100%;
+        max-width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Images */
+
+    img {
+        max-width: 100%;
     }
 }
 
 
-/* =========================================
-   SMALL PHONES
-   ========================================= */
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
 
-@media (max-width: 480px) {
+@media (max-width: 390px) {
 
     .navbar {
-        height: 82px;
-        padding: 10px 14px;
+        height: 74px;
+        padding: 9px 10px;
+
         gap: 7px;
     }
 
     .logo {
-        gap: 7px;
+        gap: 6px;
     }
 
     .logo img {
-        width: 34px;
-        height: 34px;
+        width: 32px;
+        height: 32px;
+
+        flex-basis: 32px;
     }
 
     .logo-text h2 {
-        font-size: 23px;
+        font-size: 21px;
     }
 
-    .logo-text p {
-        font-size: 11px;
-    }
-
-
-    .search-box {
-        width: 46px;
-        height: 46px;
-        flex-basis: 46px;
-    }
-
+    .search-box,
     .search-box i {
-        width: 46px;
-        min-width: 46px;
+        width: 43px;
+        min-width: 43px;
+        height: 43px;
     }
-
-
-    .search-box.active {
-        width: 170px;
-        flex-basis: 170px;
-    }
-
 
     .plus-btn,
     .theme-btn {
-        width: 46px;
-        height: 46px;
-        flex-basis: 46px;
+        width: 43px;
+        height: 43px;
+
+        flex-basis: 43px;
     }
 
-
-    .plus-btn i,
-    .theme-btn i {
-        font-size: 19px;
+    .main-content {
+        padding-top: 88px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
-
-
-    /* Categories */
 
     .category-tabs {
-        margin-top: 16px;
-        padding: 0 14px 18px;
-
-        gap: 7px;
+        gap: 5px;
+        margin-bottom: 18px;
     }
 
     .category-tab {
-        height: 48px;
+        height: 45px;
 
-        padding: 0 6px;
+        padding: 0 3px;
 
-        font-size: 13px;
+        font-size: 12px;
 
-        border-radius: 13px;
-
-        gap: 5px;
+        gap: 4px;
     }
 
     .category-tab i {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
