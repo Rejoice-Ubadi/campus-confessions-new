@@ -1075,22 +1075,16 @@ if (recentPostsLink) {
 
 const searchBox = document.querySelector(".search-box");
 const searchIcon = searchBox?.querySelector("i");
-const searchInput = document.getElementById("searchInput");
+const searchInput = document.querySelector("#searchInput");
 
-if (searchBox && searchIcon && searchInput) {
+if (searchIcon && searchBox && searchInput) {
 
     searchIcon.addEventListener("click", function () {
 
-        if (window.innerWidth <= 768) {
+        searchBox.classList.toggle("active");
 
-            searchBox.classList.toggle("active");
-
-            if (searchBox.classList.contains("active")) {
-                searchInput.focus();
-            } else {
-                searchInput.value = "";
-                searchInput.dispatchEvent(new Event("input"));
-            }
+        if (searchBox.classList.contains("active")) {
+            searchInput.focus();
         }
 
     });
