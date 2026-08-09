@@ -1074,19 +1074,20 @@ if (recentPostsLink) {
    ========================================= */
 
 const searchBox = document.querySelector(".search-box");
-const searchIcon = searchBox?.querySelector("i");
-const searchInput = document.querySelector("#searchInput");
+const searchIcon = document.querySelector(".search-box i");
 
-if (searchIcon && searchBox && searchInput) {
-
+if (searchIcon && searchBox) {
     searchIcon.addEventListener("click", function () {
+        if (window.innerWidth <= 768) {
+            searchBox.classList.toggle("active");
 
-        searchBox.classList.toggle("active");
+            if (searchBox.classList.contains("active")) {
+                const input = searchBox.querySelector("input");
 
-        if (searchBox.classList.contains("active")) {
-            searchInput.focus();
+                if (input) {
+                    input.focus();
+                }
+            }
         }
-
     });
-
 }
