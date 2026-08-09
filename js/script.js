@@ -1068,3 +1068,31 @@ if (recentPostsLink) {
     });
 
 }
+
+/* =========================================
+   MOBILE SEARCH
+   ========================================= */
+
+const searchBox = document.querySelector(".search-box");
+const searchIcon = searchBox?.querySelector("i");
+const searchInput = document.getElementById("searchInput");
+
+if (searchBox && searchIcon && searchInput) {
+
+    searchIcon.addEventListener("click", function () {
+
+        if (window.innerWidth <= 768) {
+
+            searchBox.classList.toggle("active");
+
+            if (searchBox.classList.contains("active")) {
+                searchInput.focus();
+            } else {
+                searchInput.value = "";
+                searchInput.dispatchEvent(new Event("input"));
+            }
+        }
+
+    });
+
+}
