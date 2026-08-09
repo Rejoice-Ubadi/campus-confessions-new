@@ -1228,11 +1228,15 @@ body{
     border-color: rgba(169, 112, 255, 0.3);
 }
 
-/* =====================================================
-   MOBILE DESIGN
-   ===================================================== */
+/* =========================================================
+   CLEAN MOBILE DESIGN
+   ========================================================= */
 
 @media (max-width: 768px) {
+
+    /* -----------------------------------------------------
+       BASIC MOBILE RESET
+    ----------------------------------------------------- */
 
     html,
     body {
@@ -1241,16 +1245,32 @@ body{
         overflow-x: hidden;
     }
 
-    /* Hide sidebars */
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    /* -----------------------------------------------------
+       HIDE DESKTOP SIDE BARS
+    ----------------------------------------------------- */
+
     .sidebar,
     .right-sidebar {
         display: none !important;
     }
 
 
-    /* =================================================
+    /* -----------------------------------------------------
        NAVBAR
-       ================================================= */
+    ----------------------------------------------------- */
 
     .navbar {
         position: fixed;
@@ -1260,15 +1280,17 @@ body{
 
         width: 100%;
         max-width: none;
-        height: 78px;
+        height: 76px;
 
         padding: 10px 14px;
 
         display: flex;
         align-items: center;
+
         gap: 10px;
 
         background: #090B14;
+
         border-bottom: 1px solid #1F2332;
 
         z-index: 1000;
@@ -1277,53 +1299,53 @@ body{
     }
 
 
-    /* =================================================
+    /* -----------------------------------------------------
        LOGO
-       ================================================= */
+    ----------------------------------------------------- */
 
     .logo {
-        flex: 1;
-        min-width: 0;
-
         display: flex;
         align-items: center;
 
         gap: 8px;
+
+        flex: 1;
+        min-width: 0;
+
+        overflow: hidden;
     }
 
     .logo img {
-        width: 36px;
-        height: 36px;
+        width: 34px;
+        height: 34px;
 
-        flex: 0 0 36px;
+        flex: 0 0 34px;
 
         object-fit: contain;
     }
 
     .logo-text {
         min-width: 0;
+        overflow: hidden;
     }
 
     .logo-text h2 {
         margin: 0;
 
-        font-size: 23px;
+        font-size: 24px;
         line-height: 1;
 
         white-space: nowrap;
     }
-
-    /* Hide "Confessions & Opinions" on phones.
-       This is what was making the logo area too tall. */
 
     .logo-text p {
         display: none;
     }
 
 
-    /* =================================================
+    /* -----------------------------------------------------
        SEARCH
-       ================================================= */
+    ----------------------------------------------------- */
 
     .search-box {
         width: 46px;
@@ -1339,13 +1361,18 @@ body{
         align-items: center;
 
         background: #141722;
-        border: 1px solid #292D3D;
 
-        border-radius: 15px;
+        border: 1px solid #292D3C;
+
+        border-radius: 14px;
 
         overflow: hidden;
 
-        transition: width 0.25s ease;
+        box-sizing: border-box;
+
+        transition:
+            width 0.25s ease,
+            flex-basis 0.25s ease;
     }
 
     .search-box i {
@@ -1358,7 +1385,7 @@ body{
         align-items: center;
         justify-content: center;
 
-        color: #9298AA;
+        color: #9CA3B5;
 
         font-size: 19px;
 
@@ -1371,19 +1398,23 @@ body{
         width: 100%;
 
         margin: 0;
-
-        padding: 0 8px;
+        padding: 0 8px 0 0;
 
         background: transparent;
+
         border: none;
         outline: none;
 
         color: white;
 
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    /* Search opened */
+    .search-box input::placeholder {
+        color: #777D91;
+    }
+
+    /* Search expanded */
 
     .search-box.active {
         width: 170px;
@@ -1397,9 +1428,9 @@ body{
     }
 
 
-    /* =================================================
-       RIGHT BUTTONS
-       ================================================= */
+    /* -----------------------------------------------------
+       RIGHT NAV BUTTONS
+    ----------------------------------------------------- */
 
     .nav-right {
         display: flex;
@@ -1407,7 +1438,7 @@ body{
 
         gap: 7px;
 
-        flex-shrink: 0;
+        flex: 0 0 auto;
     }
 
 
@@ -1430,11 +1461,10 @@ body{
 
     .plus-btn i {
         font-size: 20px;
-        margin: 0;
     }
 
 
-    /* Completely hide Share Something */
+    /* HIDE SHARE BUTTON */
 
     .share-btn {
         display: none !important;
@@ -1463,19 +1493,26 @@ body{
     }
 
 
-    /* =================================================
-       PAGE CONTENT
-       ================================================= */
+    /* -----------------------------------------------------
+       PAGE LAYOUT
+    ----------------------------------------------------- */
 
     .page-layout {
-        width: 100%;
         display: block;
+
+        width: 100%;
+        max-width: 100%;
 
         margin: 0;
         padding: 0;
 
         box-sizing: border-box;
     }
+
+
+    /* -----------------------------------------------------
+       MAIN CONTENT
+    ----------------------------------------------------- */
 
     .main-content {
         width: 100%;
@@ -1483,25 +1520,22 @@ body{
 
         margin: 0;
 
-        /* IMPORTANT:
-           Leaves space underneath the fixed navbar */
-
-        padding: 94px 14px 30px;
+        padding: 0 14px 30px;
 
         box-sizing: border-box;
     }
 
 
-    /* =================================================
+    /* -----------------------------------------------------
        CATEGORY TABS
-       ================================================= */
+    ----------------------------------------------------- */
 
     .category-tabs {
         width: 100%;
 
-        margin: 0 0 22px 0;
+        margin: 0;
 
-        padding: 0;
+        padding: 18px 0 20px;
 
         display: flex;
 
@@ -1514,11 +1548,12 @@ body{
 
     .category-tab {
         flex: 1;
+
         min-width: 0;
 
         height: 48px;
 
-        padding: 0 5px;
+        padding: 0 6px;
 
         display: flex;
         align-items: center;
@@ -1536,102 +1571,157 @@ body{
     }
 
     .category-tab i {
-        font-size: 14px;
+        flex: 0 0 auto;
 
-        flex-shrink: 0;
+        font-size: 14px;
     }
 
 
-    /* =================================================
+    /* -----------------------------------------------------
        POSTS
-       ================================================= */
+    ----------------------------------------------------- */
+
+    #posts-container {
+        width: 100%;
+        max-width: 100%;
+    }
 
     .post-card {
         width: 100%;
         max-width: 100%;
 
-        margin: 0 0 15px 0;
+        margin: 0 0 14px;
 
-        padding: 22px 20px;
+        padding: 20px;
 
         box-sizing: border-box;
+
+        border-radius: 17px;
     }
 
     .post-text {
         max-width: 100%;
 
         font-size: 20px;
+        line-height: 1.5;
 
-        overflow-wrap: break-word;
-        word-break: break-word;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    .post-user {
+        min-width: 0;
+    }
+
+    .post-info {
+        min-width: 0;
+    }
+
+    .post-info h3 {
+        font-size: 15px;
+    }
+
+    .post-meta {
+        flex-wrap: wrap;
+
+        font-size: 13px;
     }
 
 
-    /* =================================================
+    /* -----------------------------------------------------
        POST ACTIONS
-       ================================================= */
+    ----------------------------------------------------- */
 
     .post-actions {
         width: 100%;
 
         display: flex;
         justify-content: space-between;
-        align-items: center;
-    }
-
-    .left-actions,
-    .right-actions {
-        gap: 8px;
-    }
-
-    .action-btn,
-    .icon-btn {
-        padding: 7px;
-    }
-
-
-    /* =================================================
-       MODAL
-       ================================================= */
-
-    .post-modal {
-        width: calc(100% - 28px);
-        max-width: 500px;
 
         box-sizing: border-box;
     }
 
-    #postContent {
+    .left-actions,
+    .right-actions {
+        display: flex;
+        align-items: center;
+
+        gap: 8px;
+    }
+
+
+    /* -----------------------------------------------------
+       ABOUT
+    ----------------------------------------------------- */
+
+    .about-section {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+        padding-top: 18px;
+
+        box-sizing: border-box;
+    }
+
+    .about-header {
+        gap: 12px;
+    }
+
+    .about-header h1 {
+        font-size: 22px;
+    }
+
+
+    /* -----------------------------------------------------
+       MODAL
+    ----------------------------------------------------- */
+
+    .modal-overlay {
+        padding: 15px;
+
+        box-sizing: border-box;
+    }
+
+    .post-modal {
+        width: 100%;
+        max-width: 500px;
+
+        padding: 22px;
+
+        box-sizing: border-box;
+    }
+
+    #postContent,
+    #commentContent {
         width: 100%;
         max-width: 100%;
 
         box-sizing: border-box;
     }
 
-
-    /* Images */
-
-    img {
-        max-width: 100%;
-    }
 }
 
 
-/* =====================================================
-   VERY SMALL PHONES
-   ===================================================== */
+/* =========================================================
+   SMALL PHONES
+   ========================================================= */
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
 
     .navbar {
-        height: 74px;
-        padding: 9px 10px;
+        height: 72px;
+
+        padding: 9px 12px;
 
         gap: 7px;
     }
 
+
+    /* LOGO */
+
     .logo {
-        gap: 6px;
+        gap: 7px;
     }
 
     .logo img {
@@ -1642,46 +1732,76 @@ body{
     }
 
     .logo-text h2 {
-        font-size: 21px;
+        font-size: 22px;
     }
 
-    .search-box,
-    .search-box i {
-        width: 43px;
-        min-width: 43px;
-        height: 43px;
+
+    /* SEARCH */
+
+    .search-box {
+        width: 44px;
+        height: 44px;
+
+        flex-basis: 44px;
     }
+
+    .search-box i {
+        width: 44px;
+        min-width: 44px;
+
+        height: 44px;
+    }
+
+    .search-box.active {
+        width: 160px;
+        flex-basis: 160px;
+    }
+
+
+    /* BUTTONS */
 
     .plus-btn,
     .theme-btn {
-        width: 43px;
-        height: 43px;
+        width: 44px;
+        height: 44px;
 
-        flex-basis: 43px;
+        flex-basis: 44px;
     }
 
-    .main-content {
-        padding-top: 88px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+
+    /* CATEGORIES */
 
     .category-tabs {
-        gap: 5px;
-        margin-bottom: 18px;
+        padding-top: 16px;
+        padding-bottom: 18px;
+
+        gap: 6px;
     }
 
     .category-tab {
-        height: 45px;
+        height: 46px;
 
-        padding: 0 3px;
+        padding: 0 5px;
 
         font-size: 12px;
 
-        gap: 4px;
+        border-radius: 12px;
+
+        gap: 5px;
     }
 
     .category-tab i {
         font-size: 13px;
+    }
+
+
+    /* POSTS */
+
+    .post-card {
+        padding: 18px;
+    }
+
+    .post-text {
+        font-size: 19px;
     }
 }
